@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad | Portfolio</title>
+    <!-- Font Awesome untuk ikon media sosial -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS lokal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="tube">
+            <div class="liquid"></div>
+        </div>
+        <div class="loading-label">INITIALIZING...</div>
+    </div>
+
+    <!-- Background Video -->
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="inksmoke.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <a href="#" class="logo"> <span id="logo-text"></span> </a>
+            <nav class="navbar">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="social-links">
+                <a href="https://github.com/ahmad3006/ahmadhafidzh" target="_blank" class="social-icon github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/ahmadhfzalfa/?next=%2F" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmad-hafidzh-alfareza-03a522268/" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <video autoplay muted loop>
+                <source src="video.mp4" type="video/mp4" />
+            </video>
+
+            <div class="hero-container">
+                <div class="biodata">
+                    <h3>About Me</h3>
+                    <p>👋 Hello, I'm <strong>Ahmad Hafidzh Alfareza</strong></p>
+                    <p>⚡ Electrical Engineer | 💡 Future Innovator</p>
+                    <p>🚀 Currently an electrical engineering student at <strong>University of Brawijaya</strong>.</p>
+                    <p>🟢 Part of <strong>Society of Renewable Energy (SRE)</strong> UB as an <em>Associate Competition</em>.</p>
+                </div>
+
+            <div class="hero-content">
+                <img src="1706142565524.jpg" alt="Hafidzh Photo" class="hero-photo" />
+                <div class="hero-text">
+                    <h1>Hello, I'm <span>Hafidzh</span></h1>
+                    <h2>Electrical Engineer | University Of Brawijaya</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <h2>My Portfolio</h2>
+            <p>You can download my CV below:</p>
+            <a href="Ahmad Hafidzh Alfareza_CV.pdf" download class="cv-download">Download CV</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:hafidzh.qsbs@gmail.com">hafidzh.qsbs@gmail.com</a></li>
+                <li>Instagram: <a href="https://instagram.com/ahmadhfzalfa" target="_blank">@ahmadhfzalfa</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/ahmad-hafidzh-alfareza" target="_blank">Ahmad Hafidzh Alfareza</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        const logoSpan = document.getElementById("logo-text");
+        const text = "Ahmad Hafidzh Alfareza";
+        let i = 0;
+    
+        function type() {
+            logoSpan.textContent = ""; // Reset isi
+            i = 0;
+    
+            function writeText() {
+                if (i < text.length) {
+                    logoSpan.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(writeText, 100);
+                } else {
+                    setTimeout(type, 1000); // Loop lagi
+                }
+            }
+    
+            writeText();
+        }
+    
+        window.addEventListener("load", type);
+    </script>    
+</body>
+</html>
